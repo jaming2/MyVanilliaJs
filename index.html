@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Styled Document</title>
+    <style>      
+body {
+font-family: 'Arial', sans-serif;
+background-color: #f0f0f0;
+margin: 0;
+padding: 0;
+height: 100vh;
+}
+
+#login {
+background-color: #fff;
+border-radius: 8px;
+padding: 100px;
+margin: 300px;
+}
+h2 {
+color: #007BFF; /* 로그인 헤더 색상 설정 */
+text-align: center;
+}
+
+form {
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+input {
+margin: 10px 0;
+padding: 8px;
+border: 1px solid #ccc;
+border-radius: 4px;
+}
+
+#LoginButton {
+background-color: #007BFF; /* 버튼 배경색 설정 */
+color: #fff; /* 버튼 텍스트 색상 설정 */
+padding: 8px 16px;
+border: none;
+border-radius: 4px;
+cursor: pointer;
+}
+#Hello{
+color: white;
+text-shadow: 2px 2px 2px black;
+display: inline;
+font-size: 50px;
+}
+#buttons{
+margin-left: 40px;
+display: none;
+margin-top: 40px;
+}
+.EachButton{
+background-color: #007BFF; /* 버튼 배경색 설정 */
+color: white; /* 버튼 텍스트 색상 설정 */
+display: inline-block;
+font-size: 25px;
+text-shadow: 0.5px 0.5px 0.5px black;
+padding: 8px 16px;
+margin-left: 20px;
+border: none;
+border-radius: 10px;
+cursor: pointer;
+}
+#SelectColor{
+display: none;
+}
+#SelectColor2{
+display: none;
+}
+#SelectBackgroundForm{
+display: inline;
+text-align: left;
+}
+#colorbutton{
+display: none;
+margin-right: 80px;
+}
+.ColorSet{
+text-shadow: 0.5px 0.5px 0.5px black;
+padding: 8px 16px;
+margin-left: 20px;
+border-radius: 10px;
+font-size: 20px;
+}
+#ClockText{
+color: white;
+text-shadow: 2px 2px 2px black;
+display: inline;
+}
+.Text{
+margin-left: 40px;
+margin-top: 40px;
+margin-right: 20px;
+}
+#ClockOnButton{
+display: none;
+margin-top: 10px;
+margin-left: 295px;
+}
+#ClockOffButton{
+display: none;
+margin-left: 295px;
+margin-top: 5px;
+}
+#WeatherOnButton{
+display: none;
+margin-top: 10px;
+margin-left: 415px;
+}
+#WeatherOffButton{
+display: none;
+margin-left: 415px;
+margin-top: 5px;
+}
+.IMG{
+display: none;
+}
+.ONOFF2{
+margin-top: 0px;
+margin-left: 420px;
+}
+#todoForm{
+position: fixed; left: 60px; top: 350px;
+display: none;
+}
+#positionList{
+position: fixed; left: 60px; top: 400px;
+}
+#todoList{
+font-size: 30px;
+color: #f0f0f0;
+}
+span{
+margin-right: 30px;
+text-shadow: 0.5px 0.5px 0.5px black;
+}
+.listButton{
+background-color: pink; /* 버튼 배경색 설정 */
+color: black; /* 버튼 텍스트 색상 설정 */
+font-size: 15px;
+text-shadow: 0.5px 0.5px 0.5px black;
+padding: 4px 8px;
+border: none;
+border-radius: 30px;
+cursor: pointer;
+}
+.listInput{
+text-shadow: 0.5px 0.5px 0.5px black;
+padding: 8px 16px;
+border-radius: 10px;
+font-size: 25px;
+}
+.WeatherText{
+color: white;
+text-shadow: 2px 2px 2px black;
+display: inline;
+}
+#imgButton{
+display: none;
+}
+    </style>
+</head>
+<body>
+    <div id="login">
+        <h2>Log In</h2>
+        <form id="LoginForm">
+          <input required maxlength="15" minlength="2" type="text" placeholder="What is your name?"></input>
+          <button id="LoginButton"><strong>Log In</strong></button>
+        </form>
+    </div>
+    <div class="Text">
+        <h1 id="Hello"></h1>
+    </div>
+    <div style="position:fixed;right:50px;top:250px;">
+        <h1 id="ClockText"><strong></strong></h1>
+    </div>
+    <h1 style="position:fixed;right:50px;top:150px;" id="WeatherText1" class="WeatherText"><strong></strong></h1> 
+    <h1 style="position:fixed;right:50px;top:190px;" id="WeatherText2" class="WeatherText"><strong></strong></h1>
+    <!-- 각각의 버튼 추가(배경 바꾸기, 날씨보기(위치)) -->
+    <div id="buttons">
+        <button class="EachButton" id="Button1"><strong>select background</strong></button>  
+        <button class="EachButton" id="Button2"><strong>clock</strong></button>
+        <button class="EachButton" id="Button3"><strong>weather</strong></button>
+      <!--하나하나의 버튼 내용 설정/1(배경색 정하기)  -->
+        <form id="SelectBackgroundForm"> 
+             <input class="ColorSet" id="SelectColor" placeholder="Write first color"  minlength="1"></input>
+             <input class="ColorSet" id="SelectColor2" placeholder="Write second color"  minlength="1"></input>
+             <button class="EachButton" id="colorbutton"><strong>Click this</strong></button>
+        </form>
+     <!--하나하나의 버튼 내용 설정/2(시계 버튼, 날씨버튼)  -->
+        <div class="ONOFF">
+        <button id="ClockOnButton" class="EachButton"><strong>ON</strong> </button>
+        <button id="ClockOffButton" class="EachButton"><strong> OFF </strong></button>
+        </div><div class="ONOFF">
+        <button id="WeatherOnButton" class="EachButton"><strong>ON</strong> </button>
+        <button id="WeatherOffButton" class="EachButton"><strong> OFF </strong></button>
+        </div>
+    </div>
+        <!-- todo 리스트 만들기 -->
+    <form id="todoForm">
+        <input class="listInput" type="text" placeholder="To do list" required/>
+    </form>
+    <div id="positionList">
+        <ul id="todoList"></ul>
+    </div>
+    <div style="position:fixed;right:10px;bottom:10px;">
+        <img id="IMG0" class="IMG" src="https://png.pngtree.com/thumb_back/fw800/back_pic/00/05/78/3956278e5c1e79e.jpg" style="width:1000px; height:650px;"></img>
+        <img id="IMG1" class="IMG" src="https://th.bing.com/th/id/R.190ea07b9fc112e8e3b5f239535bb746?rik=gXWY583jFrUU4w&riu=http%3a%2f%2fcfs11.tistory.com%2fimage%2f12%2ftistory%2f2009%2f02%2f24%2f21%2f28%2f49a3e803cbf32&ehk=XDTjnHS%2fPvrzYJ1UYluzDjANpgMg%2bMp%2fbU5iJxGa7PI%3d&risl=&pid=ImgRaw&r=0" style="width:1000px; height:650px;"></img>
+        <img id="IMG2" class="IMG" src="https://th.bing.com/th/id/OIP.PG60DjwQtbRX3oUwQcB4VAHaEL?pid=ImgDet&w=1360&h=768&rs=1" style="width:1000px; height:650px;"></img>
+        <img id="IMG3" class="IMG" src="https://i.pinimg.com/originals/b5/d7/9c/b5d79c33b41f60613bd7756b55fe8ccf.jpg" style="width:1000px; height:650px;"></img>
+    </div>
+    <button id="imgButton" class="EachButton" style="position:fixed;right:800px;bottom:670px;"><strong>Change Image!</strong></button>
+    <script src="script.Js"></script>
+    <script src="todo.Js"></script>
+    
+</body>
+</html>
